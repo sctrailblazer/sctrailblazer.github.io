@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 38 56% 89%; /* Light Tan #F2E8D5 */
+    --foreground: 27 22% 24%; /* Dark Brown #4A3B31 */
+
+    --card: 38 60% 93%; /* Lighter Tan #F7F0E6 */
+    --card-foreground: 27 22% 24%; /* Dark Brown #4A3B31 */
+
+    --popover: 38 60% 93%; /* Lighter Tan #F7F0E6 */
+    --popover-foreground: 27 22% 24%; /* Dark Brown #4A3B31 */
+
+    --primary: 12 70% 62%; /* Sandy Orange #E2725B */
+    --primary-foreground: 40 100% 96%; /* Light Cream #FFF8F0 */
+
+    --secondary: 30 29% 74%; /* Lighter Dusty Rose #D1BBAA */
+    --secondary-foreground: 27 22% 24%; /* Dark Brown #4A3B31 */
+
+    --muted: 38 50% 85%; /* Muted Tan #E8DCC7 */
+    --muted-foreground: 27 20% 40%; /* Grayish Brown #736357 */
+
+    --accent: 30 29% 64%; /* Dusty Rose #C4A484 */
+    --accent-foreground: 27 22% 20%; /* Darker Brown #3D322C */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 30% 78%; /* Subtle Border #D9C7B8 */
+    --input: 30 30% 78%; /* Subtle Border #D9C7B8 */
+    --ring: 12 70% 55%; /* Darker Sandy Orange for focus #D9634B */
+
+    --radius: 0.5rem;
+
+    /* Chart colors - can be adjusted if charts are used extensively */
+    --chart-1: hsl(var(--primary));
+    --chart-2: hsl(var(--accent));
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    
+    /* Sidebar colors - using theme colors */
+    --sidebar-background: 38 50% 85%; /* Muted Tan for sidebar */
+    --sidebar-foreground: 27 22% 24%; /* Dark Brown */
+    --sidebar-primary: 12 70% 62%; /* Sandy Orange */
+    --sidebar-primary-foreground: 40 100% 96%; /* Light Cream */
+    --sidebar-accent: 30 29% 70%; /* Slightly lighter accent for sidebar */
+    --sidebar-accent-foreground: 27 22% 20%; /* Darker Brown */
+    --sidebar-border: 30 30% 75%; /* Subtle border for sidebar */
+    --sidebar-ring: 12 70% 55%; /* Darker Sandy Orange */
+  }
+
+  .dark {
+    /* Dark theme based on new palette - could be further refined */
+    --background: 27 22% 15%; /* Dark Brown Base #312823 */
+    --foreground: 38 56% 85%; /* Light Tan Text #E8DCC7 */
+
+    --card: 27 22% 20%; /* Slightly Lighter Dark Brown #3D322C */
+    --card-foreground: 38 56% 85%;
+
+    --popover: 27 22% 20%;
+    --popover-foreground: 38 56% 85%;
+
+    --primary: 12 70% 62%; /* Sandy Orange #E2725B */
+    --primary-foreground: 40 100% 96%; /* Light Cream #FFF8F0 */
+
+    --secondary: 30 29% 50%; /* Darker Dusty Rose #998270 */
+    --secondary-foreground: 38 56% 85%;
+
+    --muted: 27 20% 25%; /* Dark Muted Brown #4F433B */
+    --muted-foreground: 38 50% 70%; /* Lighter Muted Tan #C2B2A3 */
+
+    --accent: 30 29% 64%; /* Dusty Rose #C4A484 */
+    --accent-foreground: 40 100% 96%; /* Light Cream on Accent */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 30% 40%; /* Dark Border #7A6B5F */
+    --input: 30 30% 40%;
+    --ring: 12 70% 62%; /* Sandy Orange */
+    
+    /* Dark Sidebar colors */
+    --sidebar-background: 27 22% 10%; /* Very Dark Brown */
+    --sidebar-foreground: 38 56% 85%;
+    --sidebar-primary: 12 70% 62%;
+    --sidebar-primary-foreground: 40 100% 96%;
+    --sidebar-accent: 30 29% 45%; /* Darker Accent */
+    --sidebar-accent-foreground: 38 56% 85%;
+    --sidebar-border: 30 30% 35%;
+    --sidebar-ring: 12 70% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans; /* Use --font-geist-sans via variable */
+    font-family: var(--font-geist-sans);
+  }
+}
